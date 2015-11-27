@@ -25,10 +25,14 @@ var server = http.createServer(function (request, response) {
 	
 	if(typeof(url_parts.query.q) != 'string') { response.end(''); return; }
 	
+	console.log("searching for '" + url_parts.query.q + "' ..");	
+	
 	var re = new RegExp('^' + url_parts.query.q.toLowerCase());
 	
 	var result = find(places, function(val) { return re.test(val.toLowerCase()) });
-
+	
+	console.log("  found " + result.length + " results");	
+	
 	response.end(JSON.stringify(result));
 });
 
@@ -36,4 +40,8 @@ var server = http.createServer(function (request, response) {
 server.listen(8000);
 
 // Put a friendly message on the terminal
+console.log("----------------------------------------");
 console.log("Server running at http://127.0.0.1:8000/");
+console.log("Search for places with the qs param 'q'");
+console.log("eg.  http://127.0.0.1:8000?q=lon");
+console.log("----------------------------------------");
