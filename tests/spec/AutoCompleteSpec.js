@@ -8,7 +8,7 @@ describe("Autocomplete", function() {
 	  
   });
   
-  it("should be able to play a Song", function() {
+  it("should be..", function() {
 	  
       expect(null).toBeFalsy();
   });
