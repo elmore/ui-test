@@ -1,4 +1,4 @@
- # Front End Developer Test
+# Front End Developer Test
  
  We have a list of ~11k locations which we would like the user to be able to select from. You are required to design and implement a user interface which facilitates this and provides a mechanism to hook into the UI to get the ID of the location.
  
@@ -6,7 +6,7 @@
  
  We have provided you with a self hosting node service which allows you to search for locations based on a string (see below) but you will also find the complete list in JSON format in the server/data folder.
  
- ## Server
+## Server
  
  The server folder contains a simple node server which can be started with the shell scripts in the root. You will need Node.js installed (http://www.nodejs.org/) but you the data is also provided if thats an issue.
  
@@ -14,7 +14,7 @@
  
  http://127.0.0.1:8000?q=lon
  
- ## Client
+## Client
  
  This folder will contain your solution. We have given you a folder structure and jquery to get you started (feel free to change/add/remove stuff).
 
