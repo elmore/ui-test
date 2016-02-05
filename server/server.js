@@ -21,6 +21,8 @@ var server = http.createServer(function (request, response) {
 	
 	response.writeHead(200, {"Content-Type": "application/json"});
 
+	response.writeHead(200, {"Access-Control-Allow-Origin": "*"});	
+	
 	var url_parts = url.parse(request.url, true);
 	
 	if(typeof(url_parts.query.q) != 'string') { response.end(''); return; }
